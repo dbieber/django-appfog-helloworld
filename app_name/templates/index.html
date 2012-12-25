@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}Simple Django Site{% endblock %}
+
+{% block primary %}
+<p> Your website seems to be working!</p>
+<p> It doesn't do much now, but you're off to a good start!</p>
+<p> Here's a <b>{{ noun }}</b>so you can test out Django functionality. Good luck!</p>
+
+<form action="/" method="post">{% csrf_token %}
+    <fieldset>
+        <legend>Collect Emails for Early Adopters</legend>
+    {% for field in form %}
+        <div class="row">
+            <div class="span12">
+                <label> {{ field.label }}
+                    {% if field.errors %}
+                    ({{field.errors|join:" "}})
+                    {% endif %}
+                </label>
+                {{ field }}
+            </div>
+        </div>
+    {% endfor %}
+    <button type="submit" class="btn">Submit</button>
+    </fieldset>
+</form>
+{% endblock %}
