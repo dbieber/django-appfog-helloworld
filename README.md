@@ -6,7 +6,7 @@ You'll have your Django webapp up and running live on the internet with AppFog i
 
 1. [Start a project on AppFog.](#setting-up-appfog)
 2. [Clone this repository.](#cloning-this-repository)
-3. [Push to AppFog.](pushing-to-appfog)
+3. [Push to AppFog.](#pushing-to-appfog)
 
 ### Here's what comes with this repo.
 
