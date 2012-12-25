@@ -9,7 +9,7 @@ urlpatterns = []
 
 # app_name Patterns
 urlpatterns += patterns('app_name.views',
-    # TODO: Your patterns here
+    # Place your patterns here
     url(r'^$', 'signup_view'),
     url(r'^thanks/$', direct_to_template, {'template': 'sample.html'}),
 )
